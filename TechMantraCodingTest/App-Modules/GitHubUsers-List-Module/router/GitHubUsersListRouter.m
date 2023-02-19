@@ -6,6 +6,7 @@
 //
 
 #import "GitHubUsersListRouter.h"
+#import "TechMantraCodingTest-Swift.h"
 
 @class GitHubUserDetailsRouter;
 
@@ -27,7 +28,7 @@
 }
 
 - (void)pushToGitHubUserDetailsScreen:(UINavigationController *)navigationController selectedUser:(User *)selectedGitHubUser {
-//    UIViewController *viewController = [GitHubUserDetailsRouter createModule];
-//    [navigationController pushViewController: viewController animated: true];
+    GitHubUserDetailsViewController *detailsView = (GitHubUserDetailsViewController *)[GitHubUserDetailsRouter createModuleWith:selectedGitHubUser];
+    [navigationController pushViewController: detailsView animated: true];
 }
 @end

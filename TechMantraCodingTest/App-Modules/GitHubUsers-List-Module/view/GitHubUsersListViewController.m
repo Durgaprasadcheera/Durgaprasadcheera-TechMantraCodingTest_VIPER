@@ -132,14 +132,7 @@
     if (self.showHistoryData == true) {
         self.activeUser = self.filteredUsers[indexPath.row];
     }
-    [self performSegueWithIdentifier:@"toUserDetailsScreen" sender:nil];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier  isEqual: @"toUserDetailsScreen"]) {
-        GitHubUserDetailsViewController *detailsView = (GitHubUserDetailsViewController *)segue.destinationViewController;
-        detailsView.activeUser = self.activeUser;
-    }
+    [self.presenter showGitHubUserDetailsController:self.navigationController selecteduser:self.activeUser];
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {

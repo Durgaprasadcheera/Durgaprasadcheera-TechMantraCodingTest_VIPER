@@ -336,7 +336,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
             endingLineNumber = "139"
-            landmarkName = "-prepareForSegue:sender:"
+            landmarkName = "-searchBarTextDidEndEditing:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
